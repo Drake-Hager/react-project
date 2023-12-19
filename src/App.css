@@ -1,0 +1,121 @@
+
+.list-group-item{
+  text-align: center;
+background-image: url(public/images/wanted-poster-2-background.jpg);
+background-size: cover; 
+border:none;
+}
+#allCrew{
+ 
+  padding: 5em;
+  color:red;
+  background-image: url(images/the-good-wooden-background.jpg);
+  background-size: cover;
+}
+#search{
+  box-shadow: 5px 5px 10px #ee2f2f;
+  border:thin solid black;
+  padding: 5em;
+  color:skyblue;
+  background-image: url(public/images/the-good-wooden-background.jpg);
+  background-size:cover;
+}
+#background{
+  background-image: url(public/images/the-good-wooden-background.jpg);
+  background-size:contain;
+   border:4px ridge goldenrod;
+}
+
+
+div.card{
+  background-image: url(images/wanted-poster-2.jpg), url(public/images/wanted-poster-2-background.jpg);
+background-size:contain;
+background-repeat: no-repeat, repeat-y;
+background-position: top;
+  border-top:dotted silver 10px;
+  box-sizing: border-box;
+
+ 
+}
+.card-img-top{
+  margin-top: 18%; 
+}
+body{
+  background-image: url(images/One-piece-background.jpg);
+  background-size: cover;
+  box-shadow: cadetblue 3px 2px;
+}
+@media screen and (min-width:0) and (max-width:575px) {
+  div.card{background-size:contain;}
+  .card-img-top{
+    height:19vh;
+    width: 14vw;
+    margin-top: 12%; 
+  }
+.list-group-item{
+  width:92%;
+  margin:auto;
+  margin-top: -1%;
+}
+}
+@media screen and (min-width:575px) and (max-width:768px) {
+  .card-img-top{
+    margin-top: 14%;
+    width:17vw;
+    height:23vh;
+
+  }
+.list-group-item{
+  width:92%;
+  margin:auto;
+  margin-top: -1%;
+}}
+  @media  screen and (min-width:768px) and (max-width:992px) {
+    .card-img-top{
+      margin-top: 21%;
+      width:11vw;
+      height:37vh;
+  margin-bottom: 3%;
+    }
+    .list-group-item{
+      margin:auto;
+      width:87%;
+      margin-top:-1%;
+    }
+  }
+@media screen and (min-width:992px) and (max-width:1200px) {
+  .card-img-top{
+    margin-top: 9%;
+    width:200px;
+    height:18vh;
+
+  }
+.list-group-item{
+  margin-top:-1%;
+}}
+  @media screen and (min-width:1200px) and (max-width:1400px) {
+ .card-img-top{
+  height:22vh;
+  width:14vw;
+  margin-top:14%;
+ }   
+ .list-group-item{
+  width:92%;
+  margin:auto;
+  margin-top: -1%;
+ }
+  }
+@media  screen and (min-width:1400px) {
+ .card-img-top{
+width:12vw;
+margin-top: 17%;
+height:27vh;
+ } 
+ .list-group-item{
+  width:92%;
+  margin:auto;
+  margin-top:-1%;
+
+
+ }
+}
