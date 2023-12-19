@@ -5,7 +5,7 @@
   padding: 5em;
   color:red;
   
-  background-image:url(public/images/the-good-wooden-background.jpg);
+  background-image:url(/images/the-good-wooden-background.jpg);
   background-size:cover;
 }
 #addCrew > h3{
