@@ -2,13 +2,16 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "homepage":"Drake-Hager.github.io",
+  "homepage":"https://Drake-Hager.github.io/final-project",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist",
+   "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+   
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
