@@ -2,7 +2,7 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Drake-Hager.github.io/.github.io-react-project",
+  "homepage": "https://Drake-Hager.github.io/react-project",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
