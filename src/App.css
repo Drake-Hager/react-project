@@ -9,7 +9,7 @@ border:none;
  
   padding: 5em;
   color:red;
-  background-image: url(/images/the-good-wooden-background.jpg);
+  background-image: url();
   background-size: cover;
 }
 #search{
@@ -40,17 +40,24 @@ background-position: top;
 .card-img-top{
   margin-top: 18%; 
 }
+#font{
+  font-family: blood-scratch;
+}
 body{
   background-image: url(/images/One-piece-background.jpg);
   background-size: cover;
   box-shadow: cadetblue 3px 2px;
+}
+@font-face {
+  font-family: blood-scratch;
+  src:local(fonts/blood-scratch-font) url(https://www.fontspace.com/blood-scratch-font-f10485);
 }
 @media screen and (min-width:0) and (max-width:575px) {
   div.card{background-size:contain;}
   .card-img-top{
     height:19vh;
     width: 14vw;
-    margin-top: 12%; 
+    margin-top: 10%; 
   }
 .list-group-item{
   width:92%;

@@ -11,17 +11,28 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
-const [allCrew, setAllCrew] = useState(null);
-const [searchResults, setSearchResults] = useState(null);
+const [allCrew, setAllCrew] = useState([]);
+const [searchResults, setSearchResults] = useState([]);
 const [keywords, setKeywords] = useState("");
 const [bountySearch, setBountySearch] = useState()
 
 useEffect(() => {
+
+  if(localStorage){
+    const crewLocal = JSON.parse(localStorage.getItem('Crew'));
+
+    if(crewLocal){
+      saveCrew(crewLocal);
+    }else{
   saveCrew(Crew)
-}, []);
+}}}, []);
 const saveCrew = (updatedCrew) => {
   setAllCrew(updatedCrew);
   setSearchResults(updatedCrew);
+  if(localStorage){
+ localStorage.setItem('Crew', JSON.stringify(updatedCrew))
+ console.log('Saved to local storage');
+  }
 }
 
 const searchCrew = () => {
@@ -88,70 +99,70 @@ const Crew = [{
   name: "Strawhat Luffy",
   location:"East Blue",
   rank: "Captain",
-  image: 'final-project/public/images/Strawhat-luffy.jpg',
+  image: 'images/Strawhat-luffy.jpg',
   bounty: 1500000000
 }, {
   id:nanoid(),
   name: "Roronoa Zoro",
   location: "Shell Island",
   rank: "Swordsman",
-  image: '/images/Zoro.jpg',
+  image: 'images/Zoro.jpg',
   bounty: 1111000000
 }, {
   id:nanoid(),
   name: "Sanji Vinsmoke",
   location: "Baratie ship",
   rank: "Chef",
-  image: '/images/Sanji.jpg',
+  image: 'images/Sanji.jpg',
   bounty: 1032000000
 }, {
   id:nanoid(), 
   name: "Nami Cat-burgler",
   location: "Orange Town",
   rank: "Navigator",
-  image: '/images/Nami.jpg',
+  image: 'images/Nami.jpg',
   bounty: 366000000
 },  {
   id:nanoid(),
   name: "Tony-Tony Chopper",
   location: "Drum Island",
   rank: "Doctor",
-  image: '/images/Chopper.jpg',
+  image: 'images/Chopper.jpg',
   bounty: 1000
 },{
   id:nanoid(),
   name: "God Usopp",
   location: "Syrup Village",
   rank: "Sniper",
-  image: '/images/Usopp.jpg',
+  image: 'images/Usopp.jpg',
   bounty: 500000000
 }, {
   id:nanoid(),
   name: "Nico Robin",
   location: "Ohara (destroyed)",
  rank: "Archaeologist",
-  image: '/images/Nico-robin.jpg',
+  image: 'images/Nico-robin.jpg',
   bounty: 930000000
 }, {
   id:nanoid(),
   name: "Franky Flam",
   location: "Water 7",
   rank: "Shipwright",
-  image: '/images/Franky.jpg',
+  image: 'images/Franky.jpg',
   bounty: 394000000
 }, {
   id:nanoid(),
   name: "Soul King Brook",
   location: "Thriller Bark",
   rank: "Musician",
-  image: '/images/Brook.jpg',
+  image: 'images/Brook.jpg',
   bounty: 383000000
 }, {
   id:nanoid(),
   name: "Jinbe The Fishman",
   location: "Fishman Island",
   rank: "Helmsman",
-  image: '/images/jinbe.jpg',
+  image: 'images/jinbe.jpg',
   bounty: 1100000000
 }
 ];
@@ -166,7 +177,7 @@ setSearchResults([...searchResults, newCrew])
   return (
     <>
     <div className='container' id='background'>
-     
+     {/*<h2 id='font'>Most Wanted Board</h2>*/}
     <div className="row m-3" id='allCrew'>
     {searchResults &&  searchResults.map((Crew) =>
     (<div className='col-lg-4 col-12' key={Crew.id}>
